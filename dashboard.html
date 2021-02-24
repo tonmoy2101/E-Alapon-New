@@ -1,0 +1,81 @@
+<div th:fragment="dashboard">
+
+  <nav id="sidebar">
+            <div class="sidebar-header">
+                <img style="border-radius: 50%;" class="sidebar-logo-image" src="./img/logo.jpg" alt="">
+                <h3 class="sidebar-logo-text">ই-আলাপন</h3>
+            </div>
+
+            <ul class="list-unstyled" id="list-unstyled">
+                <!-- <p>Dummy Heading</p> -->
+                <li>
+                    <a class="nav-bar-actv-btn active-nav-bar-btn" th:href="@{/home}"><i
+                            class="fa fa-tachometer-alt"></i><span style="margin-left: 8px;"></span>Dashboard</a>
+                </li>
+                <li>
+                    <a class="nav-bar-actv-btn" th:href="@{/phonebook}"><i class="fa fa-book"></i><span
+                            style="margin-left: 8px;"></span>Phone Book</a>
+                </li>
+                <li>
+                    <a class="nav-bar-actv-btn" th:href="@{/office}"><i class="fa fa-building"></i><span
+                            style="margin-left: 8px;"></span>Office</a>
+                </li>
+                <li>
+                    <a class="nav-bar-actv-btn" th:href="@{/eBaarta}"><i class="fa fa-home"></i><span
+                            style="margin-left: 8px;"></span>E-Barta</a>
+                </li>
+                <li>
+                    <a class="nav-bar-actv-btn" th:href="@{/notice}"><i class="fa fa-exclamation-triangle"></i><span
+                            style="margin-left: 8px;"></span>Notice</a>
+                </li>
+                <li>
+                    <a class="nav-bar-actv-btn" th:href="@{/msg}"><i class="fa fa-comment"></i><span
+                            style="margin-left: 8px;"></span>Message</a>
+                </li>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="bi bi-person-fill"></i><span style="margin-left: 8px;"></span>Admin</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a th:href="@{/userType}"><i class="fa fa-users"></i><span style="margin-left: 8px;"></span>User Type</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-universal-access"></i><span
+                                    style="margin-left: 8px;"></span>User Grant</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="bi bi-gear-wide"></i><span style="margin-left: 8px;"></span>Settings</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a th:href="@{/comm}"><i class="fa fa-random"></i><span style="margin-left: 8px;"></span>Communication
+                                Type</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/post}"><i class="fa fa-comment"></i><span style="margin-left: 8px;"></span>Post</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/postCat}"><i class="fa fa-comments"></i><span style="margin-left: 8px;"></span>Post
+                                Category</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/user}"><i class="fa fa-users"></i><span style="margin-left: 8px;"></span>User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-bar-actv-btn" th:href="@{/login}"><i class="fa fa-sign-out-alt"></i><span
+                            style="margin-left: 8px;"></span>Logout</a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <p style="margin: 5px auto;">Powered by</p>
+                <h3 style="margin: 5px auto;">It Bangla Ltd.</h3>
+            </div>
+        </nav>
+
+
+</div>

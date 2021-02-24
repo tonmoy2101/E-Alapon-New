@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <title>Sign in</title>
+    <style>
+        .main-body-page {
+            background-color: #98ded92a;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .container-form-page {
+            background-color: #FFFFFF;
+            width: 400px;
+            height: 320px;
+            margin: 0px auto;
+            border-radius: 1.5em;
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+
+        .sign-in-text {
+            padding-top: 40px;
+            color: #000080bb;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        .user-name {
+            width: 76%;
+            color: rgb(38, 50, 56);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: rgba(136, 126, 126, 0.04);
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px solid rgba(0, 0, 0, 0.02);
+            margin-bottom: 20px;
+            margin-left: 46px;
+            text-align: center;
+            /* margin-bottom: 27px; */
+        }
+
+        form.log-in-form {
+            padding-top: 10px;
+        }
+
+        .pass-word {
+            width: 76%;
+            color: rgb(38, 50, 56);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: rgba(136, 126, 126, 0.04);
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px solid rgba(0, 0, 0, 0.02);
+            margin-bottom: 20px;
+            margin-left: 46px;
+            text-align: center;
+        }
+
+
+        .user-name:focus,
+        .pass-word:focus {
+            border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+        }
+
+        .submit {
+            cursor: pointer;
+            border-radius: 5em;
+            color: #fff;
+            background: linear-gradient(to right, #000080, #000080b7);
+            border: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-left: 35%;
+            font-size: 13px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        }
+
+        .forgot {
+            text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+            color: #000080a6;
+            padding-top: 10px;
+        }
+
+        a {
+            text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+            color: #000080a6;
+            text-decoration: none;
+        }
+
+        .container-logo-text-log-in {
+            margin: 0 auto;
+            text-align: center !important;
+            padding-top: 20px;
+        }
+
+        .sidebar-login-page .container-logo-text-log-in .sidebar-logo-image {
+            width: 80px;
+            height: 80px;
+        }
+
+        .sidebar-login-page .container-logo-text-log-in .sidebar-logo-text {
+            font-size: 34px !important;
+            color: #fff;
+            line-height: 20px;
+        }
+
+        .log-in-page-footer-bar {
+            text-align: center;
+        }
+
+        .container-log-in-page-footer-bar {
+            text-align: center;
+        }
+
+        .bold-brand-name-footer {
+            font-size: 34px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .pwrd-by-txt-footerbar {
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .main-body-log-in-page {
+            background-image: url("./img/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 600px) {
+            .container-form-page {
+                border-radius: 0px;
+            }
+
+            .container-form-page {
+                margin: 0px auto;
+                margin-left: 0px;
+                padding-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body class="main-body-page main-body-log-in-page">
+    <div class="container container-log-in-page">
+        <div class="row">
+            <div class="col-12">
+                <nav class="sidebar-login-page">
+                    <div class="container-logo-text-log-in">
+                        <img class="sidebar-logo-image" src="./img/Logo.png" alt="">
+                        <h3 class="sidebar-logo-text">ই-আলাপন</h3>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="container-form-page">
+                    <p class="sign-in-text" align="center">Sign in</p>
+                    <form class="log-in-form">
+                        <input class="user-name" type="text" align="center" placeholder="Username">
+                        <input class="pass-word" type="password" align="center" placeholder="Password">
+                        <a class="submit nav-bar-actv-btn" th:href="@{/home}" align="center">Sign in</a>
+                        <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav class="log-in-page-footer-bar">
+                    <div class="container-log-in-page-footer-bar">
+                        <h2 class="bold-brand-name-footer"><span class="pwrd-by-txt-footerbar">Powerd by</span> IT
+                            Bangla Ltd.</h2>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
